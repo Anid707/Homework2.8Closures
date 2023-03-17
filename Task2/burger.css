@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 70px 30px;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.main-inactive{
+    transform: translateX(100px);
+    transition: transform 0.5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+h1{
+    margin: 20px 0;
+}
+
+.burger{
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    background: grey;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    visibility: visible;
+}
+
+.burger-inactive{
+    visibility: hidden;
+}
+
+.menu{
+    background: rgb(49, 49, 49);
+    color: white;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    /* visibility: hidden; */
+    transform: translateX(-250px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu-active{
+    /* visibility: visible; */
+    transform: translateX(0);
+    transition: transform 0.5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.menu__wrapper{
+    padding: 80px 50px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.menu__close{
+    background: #FFFFFF;
+    color: black;
+    padding: 5px;
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    font-weight: 700;
+    font-size: 25px;
+    cursor: pointer;
+}
